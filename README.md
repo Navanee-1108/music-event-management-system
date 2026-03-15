@@ -1,67 +1,55 @@
-
 🎵 Music Event Management System
 
 A full-stack Music Event Management System built using Django.
 This web application allows users to explore events, view event details, and book events online.
-It also includes a custom admin dashboard to manage event services, users, and bookings efficiently.
-
+It also includes a custom admin dashboard for managing event services, users, and bookings efficiently.
 
 ---
 
 🚀 Features
 
-User Registration and Login Authentication
+👤 User Features
 
-Event Listing Page
+- User Registration & Login Authentication
+- Browse Available Events
+- View Event Details
+- Book Events Online
+- Duplicate Booking Prevention
+- Booking Confirmation Email
+- Contact Form with Email Notification
+- View Personal Bookings (My Bookings Page)
 
-Event Details Page
+---
 
-Event Booking System
+🛠 Admin Features
 
-Duplicate Booking Prevention
-
-Email Notification for Booking Confirmation
-
-Contact Form with Email Notification
-
-My Bookings Page for Users
-
-Custom Admin Dashboard
-
-Add / Edit / Activate / Deactivate Event Services
-
-Manage Customer Bookings
-
-
+- Custom Admin Dashboard
+- Add New Event Services
+- Edit Existing Services
+- Activate / Deactivate Event Services
+- Manage Customer Bookings
+- Accept Customer Bookings
+- View Registered Users
 
 ---
 
 🛠 Technologies Used
 
-Python
-
-Django
-
-HTML5
-
-CSS3
-
-JavaScript
-
-SQLite
-
-Django Authentication System
-
-
+- Python
+- Django
+- HTML5
+- CSS3
+- JavaScript
+- SQLite
+- Django Authentication System
 
 ---
 
 📁 Project Structure
 
 music-event-management-system
-│
+
 ├── event_management        # Django project settings
-│
 ├── events                  # Main Django application
 │   ├── migrations
 │   ├── static
@@ -81,8 +69,9 @@ music-event-management-system
 ├── README.md
 └── .gitignore
 
-
 ---
+
+
 
 ## 📸 Screenshots
 
@@ -94,7 +83,6 @@ music-event-management-system
 
 ### Admin Dashboard
 ![Admin](screenshots/admin.png)
-
 
 ---
 
@@ -116,7 +104,7 @@ Run migrations
 
 python manage.py migrate
 
-Start the development server
+Start development server
 
 python manage.py runserver
 
@@ -124,9 +112,11 @@ Open in browser
 
 http://127.0.0.1:8000
 
-
 ---
 
 👨‍💻 Author
 
 Developed by Navaneethakrishnan
+
+GitHub:
+https://github.com/Navanee-1108
