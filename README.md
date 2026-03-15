@@ -1,3 +1,4 @@
+
 🎵 Music Event Management System
 
 A full-stack Music Event Management System built using Django.
