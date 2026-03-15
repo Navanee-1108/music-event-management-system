@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .mail-box {
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+    }
+    .logo {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .details p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="mail-box">
+  <div class="logo">🎉 MSD EVENTS</div>
+
+  <p>Hello {{ name }},</p>
+
+  <p>Your event booking has been <strong>confirmed successfully</strong>.</p>
+
+  <div class="details">
+    <p><strong>Event:</strong> {{ event }}</p>
+    <p><strong>Date:</strong> {{ date }}</p>
+    <p><strong>Location:</strong> {{ location }}</p>
+  </div>
+
+  <div class="price">
+    Total Amount: ₹{{ price }}
+  </div>
+
+  <div class="footer">
+    Our team will contact you shortly.<br>
+    Thank you for choosing MSD Events ❤️
+  </div>
+</div>
+
+</body>
+</html>

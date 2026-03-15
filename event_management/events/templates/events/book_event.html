@@ -1,0 +1,57 @@
+{% extends 'events/base.html' %}
+{% block content %}
+
+<div class="booking-wrapper">
+
+  <div class="booking-card">
+
+    <!-- ✅ PROFESSIONAL HEADING -->
+    <h3 class="booking-heading">Event Booking Form</h3>
+    <strong><p class="booking-subtext">
+      Please fill the details to confirm your event booking
+    </p></strong>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        pattern="[0-9]{10}"
+        title="Enter 10 digit phone number"
+        required
+      >
+
+      <input type="text" name="location" placeholder="Event Location" required>
+
+      <!-- ✅ DATE INPUT -->
+      <input
+        type="date"
+        name="event_date"
+        id="event_date"
+        required
+      >
+
+      <button type="submit" class="submit-btn">
+        Confirm Booking
+      </button>
+    </form>
+
+    <!-- messages -->
+    {% if messages %}
+      {% for message in messages %}
+        <div class="{% if message.tags %}{{ message.tags }}{% endif %}-msg">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'events/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ================= BANNER ================= -->
+<section class="banner">
+  <img src="{% static 'images/banner image.jpg' %}" alt="Banner">
+
+  <div class="banner-content">
+    <h1>Welcome to MSD EVENTS</h1>
+    <p>
+      Creating unforgettable music and cultural events with passion,
+      professionalism, and perfection.
+    </p>
+  </div>
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="home-section why-us">
+    <h2>Why Choose Us ?</h2>
+    <p class="section-desc">
+        We specialize in organizing professional music and cultural events
+        with seamless planning and flawless execution.
+    </p>
+
+    <div class="why-grid">
+        <div class="why-card">🎵 Professional Music Events</div>
+        <div class="why-card">🎉 Complete Event Management</div>
+        <div class="why-card">⭐ Experienced Team</div>
+        <div class="why-card">💯 Customer Satisfaction</div>
+    </div>
+</section>
+
+<!-- ================= OUR SERVICES ================= -->
+<section class="home-section services">
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+        <div class="service-card">Wedding Events</div>
+        <div class="service-card">Birthday Parties</div>
+        <div class="service-card">Cultural Programs</div>
+        <div class="service-card">Stage Shows</div>
+        <div class="service-card">Private Functions</div>
+        <div class="service-card">Live Music Events</div>
+    </div>
+</section>
+
+<!-- ================= GALLERY (UNCHANGED) ================= -->
+<section class="gallery">
+    <h2>Our Gallery</h2>
+    <div class="gallery-grid">
+        <img src="{% static 'images/g1.jpeg' %}">
+        <img src="{% static 'images/g2.jpeg' %}">
+        <img src="{% static 'images/g3.jpeg' %}">
+        <img src="{% static 'images/g4.jpeg' %}">
+        <img src="{% static 'images/g7.jpeg' %}">
+        <img src="{% static 'images/g6.jpeg' %}">
+    </div>
+</section>
+
+{% endblock %}

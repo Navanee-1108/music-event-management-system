@@ -1,0 +1,41 @@
+{% extends 'events/base.html' %}
+{% block content %}
+
+<div class="contact-page">
+
+  <div class="contact-form">
+    <h3>Get In Touch</h3>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        pattern="[0-9]{10}"
+        title="Enter 10 digit phone number"
+        required
+      >
+
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="success-msg" id="successMessage">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

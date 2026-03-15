@@ -1,0 +1,594 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+
+
+
+
+.logout-btn {
+    background: #fff;
+    color: #1976d2;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* LOGIN */
+.admin-login-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-login-card {
+    width: 340px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.admin-login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+}
+
+.admin-login-card button {
+    width: 100%;
+    padding: 10px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+}
+
+/* DASHBOARD */
+.dashboard-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 220px;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.blue { background: #2196f3; }
+.green { background: #4caf50; }
+.yellow { background: #fbc02d; }
+
+
+/* ===== ADMIN DASHBOARD POSITION FIX ===== */
+
+.admin-content{
+    margin-top:80px;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+}
+
+/* CARD NUMBERS BOLD & BIG */
+.admin-cards h3 {
+    font-size: 30px;    
+    font-weight: 800;   
+    margin-top: 12px;
+}
+
+/* TITLE CENTER SPACE */
+.admin-title {
+    margin-bottom: 50px;
+}
+
+
+/* ===== ADMIN FORM ===== */
+
+.admin-form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.admin-form {
+    width: 420px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.admin-form button {
+    width: 100%;
+    padding: 10px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* ================= ADD SERVICE – FINAL POSITION FIX ================= */
+
+
+
+/* Title */
+.add-service-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 18px;  /* 👈 form pakkam varum */
+    color: #222;
+}
+
+/* Wrapper – form center + full view */
+.add-service-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px; /* 👈 full form visible */
+}
+
+/* Form card */
+.add-service-form{
+    width: 420px;
+    background: #ffffff;
+    padding: 24px 26px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Inputs */
+.add-service-form input,
+.add-service-form select,
+.add-service-form textarea{
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Button – no hover */
+.add-service-form button{
+    width: 100%;
+    padding: 11px 0;
+    background: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ================= CUSTOMER BOOKINGS – FINAL ================= */
+
+.booking-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 25px 0 20px;
+}
+
+/* Table container */
+.booking-table-wrapper{
+    margin: 0 40px 50px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    overflow-x: auto;
+}
+
+/* Table */
+.booking-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+/* Head */
+.booking-table thead{
+    background: #e3f2fd;
+}
+
+.booking-table th{
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+/* Body */
+.booking-table td{
+    padding: 12px;
+    border-bottom: 1px solid #eaeaea;
+    vertical-align: top;
+}
+
+/* Zebra rows */
+.booking-table tbody tr:nth-child(even){
+    background: #fafafa;
+}
+
+/* Address wrap */
+.address-cell{
+    max-width: 260px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+/* Status */
+.status{
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.accepted{
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Action buttons */
+.action-btn{
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action-btn.view{
+    background: #1e88e5;
+    color: #ffffff;
+}
+
+/* Empty row */
+.no-data{
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    color: #777;
+}
+
+/* TABLE */
+.table-wrapper{
+    padding: 20px 40px;
+}
+
+.admin-table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.admin-table th{
+    background: #e3f2fd;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.admin-table td{
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* ADDRESS LINE BREAK */
+.address{
+    max-width: 260px;
+    line-height: 1.5;
+}
+
+/* STATUS */
+.status{
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.pending{
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.accepted{
+    background: #d4edda;
+    color: #155724;
+}
+
+/* ACTION BUTTON */
+.btn-accept{
+    padding: 6px 14px;
+    background: #2e7d32;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.accepted-text{
+    font-size: 13px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+
+
+/* ===== ADMIN TABLE ===== */
+
+.table-wrapper {
+    padding: 0 30px 40px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.admin-table th {
+    background: #f1f5f9;
+    font-weight: 600;
+}
+
+.admin-table tr:hover {
+    background: #f9fafb;
+}
+
+/* ACTION BUTTONS */
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit {
+    background: #2563eb;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.btn-toggle {
+    background: #111827;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* STATUS */
+
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.accepted {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+.table-wrapper{
+    margin: 20px;
+}
+
+.admin-table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.admin-table th,
+.admin-table td{
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.admin-table th{
+    background: #f1f5f9;
+    font-weight: 600;
+}
+
+.status{
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.active{
+    background: #e6fff0;
+    color: #065f46;
+}
+
+.status.inactive{
+    background: #ffe4e6;
+    color: #991b1b;
+}
+
+.action-btn{
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: #1f2937;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.admin-label{
+    font-size: 12px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+
+
+
+/* ================= ADMIN NAVBAR ================= */
+
+.admin-navbar{
+    background:#000;
+    padding:14px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+}
+.admin-navbar .logo{
+    color:#ffffff;
+    font-size:20px;
+    font-weight:700;
+}
+
+.admin-nav a{
+    color:#ffffff;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
+    font-weight:500;
+}
+
+.admin-nav a:hover{
+    opacity:0.8;
+}
+
+/* LOGOUT BUTTON */
+.admin-logout-btn{
+    background:#ffffff;
+    color:#000 !important;
+    padding:6px 16px;
+    border-radius:20px;
+    font-weight:600;
+}
+
+.admin-logout-btn:hover{
+    background:#f0f0f0;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-title{
+    text-align:center;
+    margin:40px 0 30px;
+    font-size:26px;
+    font-weight:700;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    width:240px;
+    padding:28px 20px;
+    border-radius:16px;
+    color:#ffffff;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    transition:transform .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card p{
+    font-size:32px;
+    font-weight:800;
+    margin-top:10px;
+}
+
+.card.blue{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+}
+
+.card.green{
+    background:linear-gradient(135deg,#16a34a,#065f46);
+}
+
+.card.yellow{
+    background:linear-gradient(135deg,#facc15,#ca8a04);
+}
+
+.add-service-title{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:15px;
+    font-size:24px;
+    font-weight:700;
+}
+
+.add-service-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-top:10px;
+}
+
+

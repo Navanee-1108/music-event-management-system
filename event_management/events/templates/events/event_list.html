@@ -1,0 +1,21 @@
+{% extends 'events/base.html' %} {% block content %}
+
+<h2 class="page-title">Book Events</h2>
+
+<div class="event-grid">
+  {% for event in events %}
+  <div class="event-card">
+    <img src="{{ event.image.url }}" alt="{{ event.title }}" />
+
+    <h3>{{ event.title }}</h3>
+
+    <p class="short-desc">{{ event.description|truncatewords:18 }}</p>
+
+    <p class="price">₹{{ event.price }}</p>
+
+    <a href="{% url 'event_detail' event.id %}" class="btn"> View Details </a>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

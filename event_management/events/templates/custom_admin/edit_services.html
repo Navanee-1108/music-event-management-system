@@ -1,0 +1,66 @@
+{% extends "custom_admin/admin_base.html" %}
+{% block title %}Edit Services{% endblock %}
+
+{% block content %}
+<h2 class="admin-title">Edit Services</h2>
+
+{% if messages %}
+  {% for message in messages %}
+    <p class="success-msg" style="color: green; text-align: center; font-weight: 600">
+        {{ message }}
+    </p>
+  {% endfor %}
+{% endif %}
+<div class="table-wrapper">
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price (₹)</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ event.title }}</td>
+                <td>{{ event.price }}</td>
+
+                <td>
+                    {% if event.is_active %}
+                        <span class="status accepted">Active</span>
+                    {% else %}
+                        <span class="status pending">Inactive</span>
+                    {% endif %}
+                </td>
+
+                <td class="actions">
+                    <a href="{% url 'admin_edit_service' event.id %}" class="btn-edit">
+                        Edit
+                    </a>
+
+                    <a href="{% url 'admin_toggle_service' event.id %}" class="btn-toggle">
+                        {% if event.is_active %}Deactivate{% else %}Activate{% endif %}
+                    </a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="6" style="text-align:center;">No services found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script>
+setTimeout(function () {
+    document.querySelectorAll(".success-msg").forEach(function(msg){
+        msg.style.display = "none";
+    });
+}, 4000);
+</script>
+{% endblock %}

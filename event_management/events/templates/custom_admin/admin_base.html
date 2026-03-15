@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>MSD Events - Admin</title>
+    <link rel="stylesheet" href="{% static 'admin/admin.css' %}" />
+  </head>
+  <body>
+    <header class="admin-navbar">
+      <div class="logo">MSD Events – Admin</div>
+
+      <nav class="admin-nav">
+        <a href="{% url 'admin_dashboard' %}">Home</a>
+        <a href="{% url 'admin_add_service' %}">Add Services</a>
+        <a href="{% url 'admin_customer_bookings' %}">Bookings</a>
+        <a href="{% url 'admin_edit_services' %}">Edit Services</a>
+        <a href="{% url 'admin_users' %}">Users</a>
+
+        <a href="{% url 'admin_logout' %}" class="admin-logout-btn"> Logout </a>
+      </nav>
+    </header>
+
+    <main class="admin-content">{% block content %}{% endblock %}</main>
+    
+    <script>
+      setTimeout(function () {
+        var msg = document.getElementById("success-msg");
+        if (msg) {
+          msg.style.display = "none";
+        }
+      }, 3000);
+    </script>
+  </body>
+</html>

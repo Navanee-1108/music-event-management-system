@@ -1,0 +1,60 @@
+{% extends "custom_admin/admin_base.html" %}
+
+{% block content %}
+<h2 class="admin-page-title">Customer Bookings</h2>
+
+<div class="table-wrapper">
+<table class="admin-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Address</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for booking in bookings %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ booking.name }}</td>
+            <td>{{ booking.email }}</td>
+            <td>{{ booking.phone }}</td>
+            <td>{{ booking.event.title }}</td>
+            <td>{{ booking.event_date }}</td>
+
+            <!-- ✅ ADDRESS WRAP -->
+            <td class="address-cell">
+                {{ booking.location }}
+            </td>
+
+            <td>
+                {% if booking.status == "accepted" %}
+                    <span class="status accepted">Accepted</span>
+                {% else %}
+                    <span class="status pending">Pending</span>
+                {% endif %}
+            </td>
+
+            <td>
+                {% if booking.status == "pending" %}
+                    <a href="{% url 'admin_accept_booking' booking.id %}"
+                       class="btn-accept">
+                       Accept
+                    </a>
+                {% else %}
+                    <span class="accepted-text">Accepted</span>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

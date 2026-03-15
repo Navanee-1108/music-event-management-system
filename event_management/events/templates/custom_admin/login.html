@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{% static 'admin/admin.css' %}" />
+  </head>
+  <body class="admin-login-body">
+    <div class="admin-login-card">
+      <h2>Admin Login</h2>
+
+      <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button>Login</button>
+      </form>
+
+      <!-- ⭐ REGISTER LINK -->
+      <p style="margin-top: 12px">
+        New new admin?
+        <a href="{% url 'admin_register' %}"> Register here </a>
+      </p>
+
+      {% for m in messages %} {% if "Invalid" in m %}
+      <p class="error">{{ m }}</p>
+      {% endif %} {% endfor %}
+    </div>
+  </body>
+</html>

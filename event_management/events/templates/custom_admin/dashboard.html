@@ -1,0 +1,22 @@
+{% extends "custom_admin/admin_base.html" %}
+
+{% block content %}
+
+<h2 class="dashboard-title">Admin Dashboard</h2>
+
+<div class="stats">
+    <div class="card blue">
+        <h3>Total Events</h3>
+        <p>{{ total_events }}</p>
+    </div>
+    <div class="card green">
+        <h3>Total Customers</h3>
+        <p>{{ total_customers }}</p>
+    </div>
+    <div class="card yellow">
+        <h3>Total Bookings</h3>
+        <p>{{ total_bookings }}</p>
+    </div>
+</div>
+
+{% endblock %}

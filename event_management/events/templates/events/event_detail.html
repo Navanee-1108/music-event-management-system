@@ -1,0 +1,30 @@
+{% extends 'events/base.html' %}
+{% block content %}
+
+<div class="detail-box">
+
+  <div class="detail-image">
+    <img src="{{ event.image.url }}" alt="{{ event.title }}">
+  </div>
+
+  <div class="detail-content">
+    <h2>{{ event.title }}</h2>
+
+    <p class="detail-desc">
+      {{ event.description }}
+    </p>
+
+    <p><strong>Duration:</strong> {{ event.duration }}</p>
+
+    <p class="detail-price">₹{{ event.price }}</p>
+
+  
+    <a href="{% url 'login' %}?next={% url 'book_event' event.id %}" class="btn">
+      Book Event
+    </a>
+
+  </div>
+
+</div>
+
+{% endblock %}

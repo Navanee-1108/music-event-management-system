@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 620px;
+      margin: auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+    }
+    .header {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .row {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+    .highlight {
+      background: #f8f8f8;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">📩 New Event Booking</div>
+
+  <div class="row"><strong>Customer Name:</strong> {{ name }}</div>
+  <div class="row"><strong>Email:</strong> {{ email }}</div>
+  <div class="row"><strong>Phone:</strong> {{ phone }}</div>
+
+  <div class="highlight">
+    <div class="row"><strong>Event:</strong> {{ event }}</div>
+    <div class="row"><strong>Date:</strong> {{ date }}</div>
+    <div class="row"><strong>Location:</strong> {{ location }}</div>
+    <div class="row"><strong>Price:</strong> ₹{{ price }}</div>
+  </div>
+
+  <div class="footer">
+    MSD Events – Booking Notification
+  </div>
+
+</div>
+
+</body>
+</html>

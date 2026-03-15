@@ -1,0 +1,41 @@
+{% extends "custom_admin/admin_base.html" %} {% block title %}Add
+Service{%endblock %} {% block content %}
+
+<div class="add-service-container">
+  <h2 class="add-service-title">Add New Service</h2>
+
+  <div class="add-service-wrapper">
+    <form method="POST" enctype="multipart/form-data" class="add-service-form">
+      {% csrf_token %}
+
+      <input type="text" name="title" placeholder="Event Title" required />
+
+      <textarea
+        name="description"
+        placeholder="Event Description"
+        rows="4"
+        required
+      ></textarea>
+
+      <input
+        type="text"
+        name="duration"
+        placeholder="Duration (e.g. 4 Hours)"
+      />
+
+      <input type="number" name="price" placeholder="Price" required />
+
+      <input type="file" name="image" required />
+
+      <button type="submit">Add Service</button>
+      
+
+      {% if messages %} {% for message in messages %}
+      <p style="color: green; text-align: center; margin-top: 10px">
+        {{ message }}
+      </p>
+      {% endfor %} {% endif %}
+    </form>
+  </div>
+
+{% endblock %}
