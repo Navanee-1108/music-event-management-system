@@ -138,8 +138,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'navaneethakrishnan6380@gmail.com'          # 🔴 admin email
-EMAIL_HOST_PASSWORD = 'twywfnurpgxppglw'  # 🔴 gmail app password
+EMAIL_HOST_USER = 'your_email@gmail.com'          # 🔴 admin email
+EMAIL_HOST_PASSWORD = 'your_gmail_app_password'  # 🔴 gmail app password
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ADMIN_EMAIL = EMAIL_HOST_USER

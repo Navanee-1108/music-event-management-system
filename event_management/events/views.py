@@ -13,12 +13,23 @@ from django.contrib.admin.views.decorators import staff_member_required
 
 
 def login_view(request):
-    next_url = request.GET.get("next")  
+
+    # already logged in
+    if request.user.is_authenticated:
+        next_url = request.GET.get("next")
+        if next_url:
+            return redirect(next_url)
+        return redirect("home")
+
+    next_url = request.GET.get("next")
+
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
 
-        user = authenticate(username=email, password=password)
+        next_url = request.POST.get("next")
+
+        user = authenticate(request, username=email, password=password)
 
         if user:
             login(request, user)
@@ -27,14 +38,15 @@ def login_view(request):
                 return redirect(next_url)
 
             return redirect("home")
+
         else:
             messages.error(request, "Invalid email or password")
 
-    return render(request, "auth/login.html")
-
-
-
+    return render(request, "auth/login.html", {"next": next_url})
 def register_view(request):
+
+    next_url = request.GET.get("next")
+
     if request.method == "POST":
         name = request.POST.get("username")
         email = request.POST.get("email")
@@ -57,9 +69,13 @@ def register_view(request):
         )
 
         messages.success(request, "Registered successfully")
+
+        if next_url:
+            return redirect(f"/login/?next={next_url}")
+
         return redirect("login")
 
-    return render(request, "auth/register.html")
+    return render(request, "auth/register.html", {"next": next_url})
 
 
 def logout_view(request):
