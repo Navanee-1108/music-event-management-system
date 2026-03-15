@@ -1,4 +1,6 @@
-🎵 Music Event Management System
+# 🎵 Music Event Management System
+
+**Python | Django | Full Stack Project**
 
 A full-stack Music Event Management System built using Django.
 This web application allows users to explore events, view event details, and book events online.
@@ -6,7 +8,7 @@ It also includes a custom admin dashboard for managing event services, users, an
 
 ---
 
-🚀 Features
+## 🚀 Features
 
 👤 User Features
 
@@ -33,7 +35,7 @@ It also includes a custom admin dashboard for managing event services, users, an
 
 ---
 
-🛠 Technologies Used
+## 🛠 Technologies Used
 
 - Python
 - Django
@@ -45,21 +47,41 @@ It also includes a custom admin dashboard for managing event services, users, an
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
+```
 music-event-management-system
-
-├── event_management        # Django project settings
-├── events                  # Main Django application
+│
+├── event_management          # Django project settings
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── events                    # Main Django application
 │   ├── migrations
 │   ├── static
+│   │   ├── admin
+│   │   └── css
+│   │
 │   ├── templates
+│   │   ├── auth
+│   │   ├── custom_admin
+│   │   ├── emails
+│   │   └── events
+│   │
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
 │   ├── models.py
 │   ├── views.py
-│   └── urls.py
+│   ├── urls.py
+│   └── utils.py
 │
-├── media                   # Uploaded event images
-├── screenshots             # Screenshots used in README
+├── media                     # Uploaded event images
+│
+├── screenshots               # Screenshots used in README
 │   ├── home.png
 │   ├── booking.png
 │   └── admin.png
@@ -68,7 +90,7 @@ music-event-management-system
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
+```
 ---
 
 
@@ -86,7 +108,7 @@ music-event-management-system
 
 ---
 
-⚙ Installation & Setup
+## ⚙ Installation & Setup
 
 Clone the repository
 
@@ -114,9 +136,9 @@ http://127.0.0.1:8000
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Developed by Navaneethakrishnan
+Developed by **Navaneethakrishnan**
 
 GitHub:
 https://github.com/Navanee-1108
