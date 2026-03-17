@@ -7,6 +7,11 @@ This web application allows users to explore events, view event details, and boo
 It also includes a custom admin dashboard for managing event services, users, and bookings efficiently.
 
 ---
+## 🎥 Demo Video
+
+[▶ Watch Full Project Demo](https://youtu.be/z2PBF3vlpuw)
+
+---
 
 ## 🚀 Features
 

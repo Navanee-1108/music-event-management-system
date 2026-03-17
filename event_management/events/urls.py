@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin-panel/edit-services/', views.admin_edit_services, name='admin_edit_services'),
     path('admin-panel/toggle-service/<int:event_id>/', views.admin_toggle_service, name='admin_toggle_service'),
     path("admin-panel/users/", views.admin_users, name="admin_users"),
-    path("admin-panel/register/", views.admin_register, name="admin_register"),
+    path("admin-forgot-password/", views.admin_forgot_password, name="admin_forgot_password"),
 
     path("admin-logout/", views.admin_logout, name="admin_logout"),
 ]

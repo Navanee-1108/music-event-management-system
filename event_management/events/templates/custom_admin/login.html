@@ -20,16 +20,11 @@
         />
         <button>Login</button>
       </form>
+      <p><a href="{% url 'admin_forgot_password' %}">Forgot password?</a></p>
 
-      <!-- ⭐ REGISTER LINK -->
-      <p style="margin-top: 12px">
-        New new admin?
-        <a href="{% url 'admin_register' %}"> Register here </a>
-      </p>
-
-      {% for m in messages %} {% if "Invalid" in m %}
+      {% for m in messages %}
       <p class="error">{{ m }}</p>
-      {% endif %} {% endfor %}
+      {% endfor %}
     </div>
   </body>
 </html>

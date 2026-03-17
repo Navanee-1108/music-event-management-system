@@ -648,6 +648,14 @@ footer {
     border:1px solid #ccc;
 }
 
+.auth-card a{
+text-decoration:none;
+}
+
+.auth-card a:hover{
+text-decoration:none;
+}
+
 .submit-btn{
     width:100%;
     padding:10px;
@@ -1092,6 +1100,8 @@ footer {
 }
 
 
+
+
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 1024px){
@@ -1258,3 +1268,13 @@ footer {
 }
 
 }
+/* GLOBAL LINK FIX */
+
+a{
+text-decoration: none !important;
+}
+
+a:hover{
+text-decoration: none !important;
+}
+

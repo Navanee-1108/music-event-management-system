@@ -1,42 +1,28 @@
-{% extends 'events/base.html' %}
-{% block content %}
+{% extends 'events/base.html' %} {% block content %}
 
 <div class="auth-wrapper">
   <div class="auth-card">
-
     <h2>Login</h2>
 
-    <form method="POST">
+    <form method="POST" autocomplete="off">
       {% csrf_token %}
-      <input type="hidden" name="next" value="{{ next }}">
+      <input type="hidden" name="next" value="{{ next }}" />
 
       <!-- ✅ EMAIL LOGIN -->
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Email Address" 
-        required
-      >
+      <input type="email" name="email" placeholder="Email Address" required />
 
-      <input 
-        type="password" 
-        name="password" 
-        placeholder="Password" 
-        required
-      >
+      <input type="password" name="password" placeholder="Password" required />
 
       <button class="submit-btn">Login</button>
     </form>
 
     <p>
       New user?
-      <a href="{% url 'register' %}">Register here</a>
+      <a href="{% url 'register' %}?next={{ next }}">Register here</a>
     </p>
-
     {% for m in messages %}
-      <p class="error-msg">{{ m }}</p>
+    <p class="error-msg">{{ m }}</p>
     {% endfor %}
-
   </div>
 </div>
 
